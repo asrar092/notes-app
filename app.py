@@ -15,7 +15,7 @@ def home():
         return redirect("/")
 
     html = """
-    <h1>This is my Application for notes </h1>
+    <h1>This is my Application</h1>
 
     <form method="POST">
         <input name="note" placeholder="Write your note..." required>
