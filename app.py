@@ -22,7 +22,7 @@ def home():
         <button type="submit">Add Note</button>
     </form>
 
-    <h2>My Notes:</h2>
+    <h2>My Notes Bro!!:</h2>
     <ul>
     """
 
