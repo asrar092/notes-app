@@ -5,4 +5,4 @@ services:
     container_name: notes-container
     ports:
       - "8000:8000"
-    restart: unlees-stopped
+    restart: unless-stopped
