@@ -4,8 +4,10 @@ pipeline{
     
     stages{
         stage("Hello"){
-            script{
-                hello()
+            steps{
+                script{
+                    hello()
+                }
             }
         }
         stage("Code"){
