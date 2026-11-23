@@ -1,7 +1,13 @@
+@Library("shared") -
 pipeline{
     agent { label "ashif"}
     
     stages{
+        stage("Hello"){
+            script{
+                hello()
+            }
+        }
         stage("Code"){
             steps{
                 echo "This is a Code Colening"
