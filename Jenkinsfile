@@ -17,7 +17,7 @@ pipeline{
         stage("Images Push in Docker Hub"){
             steps{
                 echo "This is Push image in DockerHub"
-                sh "docker login -u asrar092 -p dckr_pat_BxvMH3bakYxwOGEw-4vLs8UQy1k"
+                sh "docker login -u asrar092 -p dckr_pat_BxvMH3bakYxwOGEw-4vLs8UQy1"
                 sh "docker tag note-app asrar092/note-app"
                 sh "docker push asrar092/note-app"
                 echo "It is Done Bro!!"
