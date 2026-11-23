@@ -17,10 +17,15 @@ pipeline{
         stage("Images Push in Docker Hub"){
             steps{
                 echo "This is Push image in DockerHub"
-                sh "docker login -u asrar092 -p dckr_pat_BxvMH3bakYxwOGEw-4vLs8UQy1"
-                sh "docker tag note-app asrar092/note-app"
-                sh "docker push asrar092/note-app"
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub',
+                    usernameVariable: 'dockerHubUser',
+                    passwordVariable: 'dockerHubPass')]){
+                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
+                sh "docker tag note-app ${env.dockerHubUser}/note-app"
+                sh "docker push ${env.dockerHubUser}/note-app"
                 echo "It is Done Bro!!"
+                }
             }
         }
         stage("Deploy"){
