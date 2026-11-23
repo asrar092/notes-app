@@ -15,6 +15,7 @@ pipeline{
                 script{
                     Code_Cloning("https://github.com/asrar092/notes-app.git","main")
                 }
+                echo "Sussessfully Clone code"
             }
         }
         stage("build"){
